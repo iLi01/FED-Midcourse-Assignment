@@ -1,4 +1,4 @@
-# FED-JS-Assignment
+# Front End Development Midcourse Assignment
 
 A week-long, group exercise for FED with Purple Beard.
 
