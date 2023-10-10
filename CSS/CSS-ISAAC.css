@@ -1,3 +1,9 @@
+:root {
+  --white: #ffffea;
+  --sixty: #89e5e4;
+  --thirty: #c3acce;
+  --ten: #ffed66;
+}
 .hero {
   background-image: url("/assets/kobby-mendez-xBFTjrMIC0c-unsplash.jpg");
   background-size: cover;
@@ -21,9 +27,9 @@
   text-align: center;
   color: #000;
   border-radius: 10px;
-  background-color: #ffffea;
+  background-color: var(--white);
 }
 #hero-button:hover {
-  color: #ffffea;
-  background-color: #c3acce;
+  color: var(--white);
+  background-color: var(--thirty);
 }
