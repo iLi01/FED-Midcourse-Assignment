@@ -9,6 +9,7 @@
 
 html {
   font-family: var(--text);
+  background-color: var(--white);
 }
 
 * {
@@ -24,8 +25,34 @@ html {
 }
 please remove when styling */
 
-html {
-  background-color: var(--white);
+.main-text-c {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.ingredients {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.alcoholic {
+  font-size: 1.1rem;
+}
+
+.instructions-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  font-size: 1rem;
+  text-align: center;
 }
 
 .top-picks {
@@ -40,6 +67,7 @@ html {
   display: flex;
   gap: 2rem;
   width: 270vw;
+  transition: all 0.3s ease-in-out;
   transform: translateX(-0vw);
 }
 
@@ -49,11 +77,10 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  height: 500px;
 }
 
 .green {
-  background-color: green;
+  /* background-color: green; */
 }
 .red {
   background-color: red;

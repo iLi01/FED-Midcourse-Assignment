@@ -64,6 +64,7 @@ async function getAPI() {
 
 changeBtn.addEventListener("click", async function (e) {
   e.preventDefault();
+  let checkName;
 
   for (let n = 0; n < 4; n++) {
     const obj = await getAPI();
@@ -79,6 +80,24 @@ changeBtn.addEventListener("click", async function (e) {
 
 async function getIngrediants() {
   const obj = await getAPI();
+  let count = 1;
+  let number = 1;
+  const ingrediants = [];
   for (const key in obj) {
+    // if (obj.hasOwnProperty(key)) {
+    //   console.log(`${key}: ${obj[key]}`);
+    // }
+    if (obj[key] === null) {
+      continue;
+    } else if (key === `strIngredient${count}`) {
+      ingrediants.push({ main: obj[key] });
+      count++;
+    } else if (key === `strMeasure${number}`) {
+      ingrediants[number - 1].measure = obj[key];
+      number++;
+    }
   }
+  console.log(ingrediants);
 }
+
+getIngrediants();
