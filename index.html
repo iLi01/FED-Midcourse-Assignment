@@ -22,7 +22,98 @@
     </section>
 
     <section class="ili">
-      <!-- Ili HTML code goes here -->
+      <section id="nav-bar"> 
+        <div class="logo-img">
+          <img src="assets/logo.png" id="logo">
+        </div>
+    
+        <div class="icon-button">
+          <button id="nav-expand-button">
+            <span class="visually-hidden">Menu</span>
+              <svg id="menu-icon" viewBox="0 0 100 80" width="30" height="30">
+                <rect width="60" height="13" rx="10"></rect>
+                <rect y="30" width="60" height="13" rx="10"></rect>
+                <rect y="60" width="60" height="13" rx="10"></rect>
+              </svg>
+          </button>
+        </div>
+    
+          <div class="menu-text">
+            <nav id="main-nav" aria-roledescription="Burger menu" aria-expanded="false">
+                <ul id="menu-list">
+                  <li><a href="">Recommended</a></li>
+                  <li><a href="">Challenge</a></li>
+                  <li><a href="">Filter</a></li>
+                </ul>
+            </nav>
+          </div>  
+    </section>
+    
+      <section id="drink-card-api">
+      <!-- replace the 'events-btn' with the drinking card id html & js-->
+        <button id="events-btn">CLICK me</button>
+          <div id="my-modal" class="modal">
+    
+            <div class="modal-content">
+              <span class="close" aria-label="close button">&times;</span>
+              
+                <div id="modal-text">
+                  <div class="img-container">
+                    <img src="https://www.allrecipes.com/thmb/jgUBewi7-dIrLBAgMi6meC7s_zw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24221-Sex-On-The-Beach-DDMFS-4x3-cd29644eb4e34a63a362584a342b4a30.jpg" id="img-api">
+                  </div>
+                  
+                      <div class="text1-container">
+                        <h2 id="drink-title">S*x on the beach</h2>
+                        <h3 id="drink-type">alcoholic / non-alcoholic</h3>
+                        <table>
+                          <tr>
+                            <th>Ingredients</th>
+                            <th>Measurements</th>
+                          </tr>
+                            <tr>
+                              <td id="ingredient1">Vodka</td>
+                              <td id="measurement1">30ml</td>
+                            </tr>
+                            <tr>
+                              <td id="ingredient2">Vodka</td>
+                              <td id="measurement2">30ml</td>
+                            </tr>
+                            <tr>
+                              <td id="ingredient3">Vodka</td>
+                              <td id="measurement3">30ml</td>
+                            </tr>
+                            <tr>
+                              <td id="ingredient4">Vodka</td>
+                              <td id="measurement4">30ml</td>
+                            </tr>
+                            <tr>
+                              <td id="ingredient5">Vodka</td>
+                              <td id="measurement5">30ml</td>
+                            </tr>
+                            <tr>
+                              <td id="ingredient6">Vodka</td>
+                              <td id="measurement6">30ml</td>
+                            </tr>
+                            <tr>
+                              <td id="ingredient7">Vodka</td>
+                              <td id="measurement7">30ml</td>
+                            </tr>
+                          </table>
+                        
+                      </div>
+                      <div class="text2-container">
+                        <h2>Instructions:</h2>
+                          <div class="instruction-wrapper">
+                            <p id="instructions">beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep</p>
+                          </div>
+                        <h2>Glass type:</h2><h3 id="glass-type">beep</h3>
+                      </div>
+              </div>
+            </div>
+          </div>
+        
+      </section>
+    
     </section>
 
     <section class="isaac">
@@ -101,6 +192,7 @@
         </div>
       </section>
     </section>
-    <script src="./index.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/script-iLi.js"></script>
   </body>
 </html>

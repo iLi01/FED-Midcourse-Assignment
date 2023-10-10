@@ -1,6 +1,220 @@
-.ili {
-  background-color: blue;
-  width: 10px;
-  height: 10px;
+:root {
+  --white: #ffffea;
+  --sixty: #89e5e4;
+  --thirty: #c3acce;
+  --ten: #ffed66;
+  --heading: "Raleway", sans-serif;
+  --text: "Montserrat", sans-serif;
 }
-/* please remove when styling */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* logo img */
+#logo {
+  width: 3.5rem;
+  padding-left: 1rem; 
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  background-color: transparent;
+}
+
+li, a, ul, .menu-text, .logo-img, #logo, svg, p {
+  background-color: transparent;
+}
+
+/*mobile first*/
+#main-nav {
+  display: none;
+}
+
+/* opened nav bar class toggle js */
+#main-nav.open {
+  display: flex;
+  padding-top: 10svh; 
+}
+
+/* the actual bar */
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10000;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(91, 91, 91, 0.405);
+  margin: 0;
+  padding: 0;
+}
+
+/* burger menu icon */
+#nav-expand-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+#nav-expand-button:hover {
+  fill: #9c9c9c;
+}
+
+/* ul elements of menu */
+#nav-bar ul {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  list-style: none;
+  text-align: end;
+  gap: 1rem;
+  margin-right: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+#nav-bar ul a {
+  text-decoration: none;
+}
+
+/* screen-reading menu */
+.visually-hidden {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  font-size: 0;
+  display: none;
+}
+
+/* space for the nav-bar */
+#drink-card-api {
+  padding-top: 70px;
+}
+
+/* pop up  */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(255, 255, 255, 0.326);
+  backdrop-filter: blur(2px) opacity(90%);
+}
+
+/* container of img + text */
+.modal-content {
+  width: 80%;
+  height: 30rem;
+  background-color: #f3f3f3;
+  margin: auto;
+  padding: 2rem;
+  border: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 6px 6px 3px rgb(170, 170, 170), inset 0rem 6rem 0 rgb(121, 195, 255), inset 0rem 12rem 0 rgb(255, 221, 30);
+}
+
+/* img + text */
+#modal-text {
+  padding: 0 1rem 0 1rem;
+  background-color: transparent;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* X buttone on modal */
+.close {
+  color: #aaaaaa;
+  align-self: flex-end;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-right: 1rem;
+  background-color: transparent;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* api drink img */
+#img-api {
+  max-width: 20rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* width of instruction text box */
+.instruction-wrapper {
+  width: 25rem;
+}
+
+
+
+@media screen and (min-width: 900px){
+  * {
+    background-color: transparent;
+  }
+
+  #logo {
+    width: 3.5rem;
+    padding-bottom: 0.3rem;
+    padding-left: 2rem;
+  }
+
+  #nav-bar {
+    width: 100%;
+  }
+
+  #nav-bar ul {
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  li, a, ul, .menu-text, .logo-img, #logo {
+    background-color: transparent;
+  }
+
+  #main-nav {
+    display: inline-block;
+    background-color: transparent;
+  }
+
+  #nav-expand-button {
+    display: none;
+  }
+
+  #main-nav.open {
+    padding-top: 0;
+  }
+
+  .modal-content {
+    box-shadow: 6px 6px 3px rgb(170, 170, 170), inset 6rem 0 rgb(121, 195, 255), inset 12rem 0 rgb(255, 221, 30);;
+  }
+
+  #modal-text {
+    flex-direction: row;
+  }
+}
