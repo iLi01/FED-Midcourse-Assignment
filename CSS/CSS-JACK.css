@@ -1,6 +1,135 @@
-.jack {
+:root {
+  --white: #ffffea;
+  --sixty: #89e5e4;
+  --thirty: #c3acce;
+  --ten: #ffed66;
+  --heading: "Raleway", sans-serif;
+  --text: "Montserrat", sans-serif;
+}
+
+html {
+  font-family: var(--text);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .jack {
   background-color: orange;
   width: 10px;
   height: 10px;
 }
-/* please remove when styling */
+please remove when styling */
+
+html {
+  background-color: var(--white);
+}
+
+.top-picks {
+  width: 100%;
+  background-color: pink;
+  padding: 1.8rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.picks-inner {
+  display: flex;
+  gap: 2rem;
+  width: 270vw;
+  transform: translateX(-0vw);
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 500px;
+}
+
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.orange {
+  background-color: orange;
+}
+
+.top-picks svg {
+  position: absolute;
+  top: 50%;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.right {
+  left: 40%;
+}
+
+.left {
+  right: 40%;
+}
+svg {
+  height: 2rem;
+}
+
+.randomDrinks {
+  padding: 1rem;
+}
+
+.drink-card {
+  display: flex;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.drink-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--sixty);
+}
+
+.text-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.drink-title {
+  font-size: 1.5rem;
+  font-family: var(--heading);
+  line-height: 0.9;
+}
+
+.button-c {
+  display: flex;
+  justify-content: center;
+}
+
+.button-c .change {
+  border: none;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sixty);
+}
+
+.change svg {
+  height: 4rem;
+  fill: var(--white);
+}
