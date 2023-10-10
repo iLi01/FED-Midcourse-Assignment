@@ -1,6 +1,35 @@
-.isaac {
-  background-color: yellow;
-  width: 10px;
-  height: 10px;
+:root {
+  --white: #ffffea;
+  --sixty: #89e5e4;
+  --thirty: #c3acce;
+  --ten: #ffed66;
 }
-/* please remove when styling */
+.hero {
+  background-image: url("/assets/kobby-mendez-xBFTjrMIC0c-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+/* Positioning of button in hero section */
+#hero-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Hero Button Styling */
+#hero-button {
+  border: none;
+  line-height: 1.5;
+  padding: 15px 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #000;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+#hero-button:hover {
+  color: var(--white);
+  background-color: var(--thirty);
+}
