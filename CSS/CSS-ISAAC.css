@@ -3,14 +3,27 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 75vh;
+  height: 100vh;
 }
-.hero-heading {
-  position: relative;
-}
-#hero-title {
+/* Positioning of button in hero section */
+#hero-button {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Hero Button Styling */
+#hero-button {
+  border: none;
+  line-height: 1.5;
+  padding: 15px 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #000;
+  border-radius: 10px;
+  background-color: #ffffea;
+}
+#hero-button:hover {
+  color: #ffffea;
+  background-color: #c3acce;
 }
