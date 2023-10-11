@@ -1,8 +1,4 @@
-/*.edil {
-  background-color: red;
-  width: 10px;
-  height: 10px;
-}*/
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
@@ -17,8 +13,6 @@
   --headerFont:'Raleway';
   --bodyFont: 'Montserrat';
 }
-
-/* please remove when styling */
 
 *{
   padding: 0;
