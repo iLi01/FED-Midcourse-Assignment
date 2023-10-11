@@ -11,13 +11,13 @@
   --bodyFont: 'Montserrat';
 }
 
+/* please remove when styling */
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-
 
 .quiz-wrapper{
   display: flex;
