@@ -5,6 +5,7 @@
   --ten: #ffed66;
   --heading: "Raleway", sans-serif;
   --text: "Montserrat", sans-serif;
+  --margin-section: 5rem;
 }
 
 html {
@@ -18,29 +19,26 @@ html {
   box-sizing: border-box;
 }
 
-/* .jack {
-  background-color: orange;
-  width: 10px;
-  height: 10px;
-}
-please remove when styling */
-
 .main-text-c {
+  width: 75%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 .name {
+  text-align: center;
   font-size: 1.5rem;
 }
 
 .ingredients {
+  text-align: center;
   list-style: none;
   font-size: 1.2rem;
 }
 
 .alcoholic {
+  text-align: center;
   font-size: 1.1rem;
 }
 
@@ -55,28 +53,56 @@ please remove when styling */
   text-align: center;
 }
 
+.reccomended-drinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--margin-section);
+}
+
 .top-picks {
   width: 100%;
-  background-color: pink;
-  padding: 1.8rem;
-  overflow-x: hidden;
+  max-width: 550px;
+  background-color: var(--thirty);
+  overflow: hidden;
   position: relative;
+
+  border-radius: 20px;
 }
 
 .picks-inner {
   display: flex;
-  gap: 2rem;
   width: 270vw;
   transition: all 0.3s ease-in-out;
   transform: translateX(-0vw);
 }
 
 .card {
-  width: 100%;
+  padding: 1rem;
+  width: 75%;
+  max-width: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-top .img-c img {
+  border-radius: 10px;
 }
 
 .green {
@@ -93,18 +119,19 @@ please remove when styling */
   position: absolute;
   top: 50%;
 
-  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
+  z-index: 10;
 }
 
 .right {
-  left: 40%;
+  left: 90%;
+  z-index: 10;
 }
 
 .left {
-  right: 40%;
+  right: 90%;
 }
 svg {
   height: 2rem;
@@ -112,6 +139,45 @@ svg {
 
 .randomDrinks {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: var(--margin-section);
+}
+
+.random-title,
+.reccomended-drinks h2 {
+  font-family: var(--heading);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.reccomended-drinks .rec-title {
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.alcoholic-btn,
+.non-alcoholic-btn {
+  font-size: 1rem;
+  background-color: var(--sixty);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.drinksContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 20rem;
 }
 
 .drink-card {
@@ -147,8 +213,8 @@ svg {
 
 .button-c .change {
   border: none;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -157,6 +223,44 @@ svg {
 }
 
 .change svg {
-  height: 4rem;
-  fill: var(--white);
+  height: 2rem;
+  fill: black;
+}
+
+@media only screen and (min-width: 550px) {
+  .card-top {
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 1rem;
+  }
+
+  .main-text-c {
+    width: 40%;
+  }
+
+  .img-c {
+    height: 300px;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .img-c img {
+    width: 220%;
+    transform: translateX(-180px);
+  }
+
+  .drinksContainer {
+    flex-direction: row;
+    max-width: 38rem;
+  }
+
+  .drink-card {
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .instructions {
+    width: 85%;
+  }
 }

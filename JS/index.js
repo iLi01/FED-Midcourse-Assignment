@@ -2,42 +2,27 @@ const rightArrow = document.querySelector(".right");
 
 const leftArrow = document.querySelector(".left");
 
-const topPickContainer = document.querySelector(".picks-inner");
+const container = document.querySelector(".picks-inner");
 
-const allCards = document.querySelectorAll(".card");
+const cardArray = document.querySelectorAll(".card");
 
 const changeBtn = document.querySelector(".change");
 
 const allDrinks = document.querySelectorAll(".drink-card");
 
-let cardPlace = 0;
-let cardNumber = 1;
+const drinksContainer = document.querySelector(".drinksContainer");
+
+function changeCarouselWidth() {
+  if (this.window.innerWidth >= 550) {
+    container.style.width = `${550 * cardArray.length}px`;
+  } else if (this.window.innerWidth < 550) {
+    container.style.width = `${cardArray.length}00vw`;
+  }
+}
+
 leftArrow.style.display = "none";
 
-rightArrow.addEventListener("click", function (e) {
-  e.preventDefault();
-  leftArrow.style.display = "block";
-
-  cardPlace += 93.5;
-  cardNumber += 1;
-  console.log(allCards.length, cardNumber);
-  topPickContainer.style.transform = `translateX(-${cardPlace}vw)`;
-  if (cardNumber >= allCards.length) {
-    rightArrow.style.display = "none";
-  }
-});
-
-leftArrow.addEventListener("click", function (e) {
-  e.preventDefault();
-  rightArrow.style.display = "block";
-  cardPlace -= 93.5;
-  cardNumber -= 1;
-  console.log(allCards.length, cardNumber);
-  topPickContainer.style.transform = `translateX(-${cardPlace}vw)`;
-  if (cardNumber <= 1) {
-    leftArrow.style.display = "none";
-  }
-});
+changeCarouselWidth();
 
 function randonNumber(number) {
   return Math.floor(Math.random() * number);
@@ -64,11 +49,10 @@ async function getAPI() {
 
 changeBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  let checkName;
 
   for (let n = 0; n < 4; n++) {
     const obj = await getAPI();
-    const card = document.querySelector(`[data-number="${n + 1}"]`);
+    const card = drinksContainer.querySelector(`[data-number="${n + 1}"]`);
     const drinkTitle = card.querySelector(".drink-title");
 
     const drinkImg = card.querySelector(".drink-img");
@@ -80,6 +64,7 @@ changeBtn.addEventListener("click", async function (e) {
 
 async function getIngrediants() {
   const obj = await getAPI();
+
   let count = 1;
   let number = 1;
   const ingrediants = [];
@@ -87,7 +72,7 @@ async function getIngrediants() {
     // if (obj.hasOwnProperty(key)) {
     //   console.log(`${key}: ${obj[key]}`);
     // }
-    if (obj[key] === null) {
+    if (obj[key] === null || obj[key] === "") {
       continue;
     } else if (key === `strIngredient${count}`) {
       ingrediants.push({ main: obj[key] });
@@ -95,9 +80,81 @@ async function getIngrediants() {
     } else if (key === `strMeasure${number}`) {
       ingrediants[number - 1].measure = obj[key];
       number++;
+    } else {
+      continue;
     }
   }
-  console.log(ingrediants);
 }
 
 getIngrediants();
+
+//gets the divided amountmso each card can fit
+const dividedNumber = 100 / Number(cardArray.length);
+//create currentcard and final number varibles outside scope
+let currentCard = "";
+let finalNumber = "";
+
+//creating function for clicking arrows
+const clickArrow = (str) => {
+  let cardNumber = "";
+  // making sure arrows are availble to press at start of click
+  rightArrow.style.display = "block";
+  leftArrow.style.display = "block";
+
+  //this if statment cicles through all of the cards availble
+  for (let i = 0; i < cardArray.length; i++) {
+    //each time we go through we get a card from card array to grab the card variable.
+    const card = cardArray[i];
+    //we then grab the attribute from the current card to see if its current on it.
+    const boolion = card.getAttribute("data-viewing");
+    if (boolion == "true") {
+      // if true, we change the attribute to false as it will no longer be true and on the card.
+      card.setAttribute("data-viewing", "false");
+      //depending on which arrow is clicked will either select the previous one in the array or next to allow for the attribute to be turned to true.
+      if (str === "left") {
+        cardArray[i - 1].setAttribute("data-viewing", "true");
+      } else if (str === "right") {
+        cardArray[i + 1].setAttribute("data-viewing", "true");
+      }
+      //make sure current card has true setting in the attribute
+      currentCard = cardArray[i];
+      break;
+    }
+  }
+  if (str === "left") {
+    //grabs card number from data number attribute
+    cardNumber = Number(currentCard.getAttribute("data-number")) - 1;
+    finalNumber -= dividedNumber;
+  } else if (str === "right") {
+    cardNumber = Number(currentCard.getAttribute("data-number")) + 1;
+    finalNumber = dividedNumber * cardNumber;
+  }
+
+  container.style.transform = `translateX(-${finalNumber}%)`;
+
+  if (cardNumber === 0) {
+    leftArrow.style.display = "none";
+  } else if (cardNumber + 1 === cardArray.length) {
+    rightArrow.style.display = "none";
+  }
+};
+
+leftArrow.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickArrow("left");
+});
+
+rightArrow.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickArrow("right");
+});
+
+window.addEventListener("resize", function (e) {
+  e.preventDefault();
+
+  if (this.window.innerWidth >= 550) {
+    container.style.width = `${550 * cardArray.length}px`;
+  } else if (this.window.innerWidth < 550) {
+    container.style.width = `${cardArray.length}00vw`;
+  }
+});

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,98 +23,105 @@
     </section>
 
     <section class="ili">
-      <section id="nav-bar"> 
+      <section id="nav-bar">
         <div class="logo-img">
-          <img src="assets/logo.png" id="logo">
+          <img src="assets/logo.png" id="logo" />
         </div>
-    
+
         <div class="icon-button">
           <button id="nav-expand-button">
             <span class="visually-hidden">Menu</span>
-              <svg id="menu-icon" viewBox="0 0 100 80" width="30" height="30">
-                <rect width="60" height="13" rx="10"></rect>
-                <rect y="30" width="60" height="13" rx="10"></rect>
-                <rect y="60" width="60" height="13" rx="10"></rect>
-              </svg>
+            <svg id="menu-icon" viewBox="0 0 100 80" width="30" height="30">
+              <rect width="60" height="13" rx="10"></rect>
+              <rect y="30" width="60" height="13" rx="10"></rect>
+              <rect y="60" width="60" height="13" rx="10"></rect>
+            </svg>
           </button>
         </div>
-    
-          <div class="menu-text">
-            <nav id="main-nav" aria-roledescription="Burger menu" aria-expanded="false">
-                <ul id="menu-list">
-                  <li><a href="">Recommended</a></li>
-                  <li><a href="">Challenge</a></li>
-                  <li><a href="">Filter</a></li>
-                </ul>
-            </nav>
-          </div>  
-    </section>
-    
+
+        <div class="menu-text">
+          <nav
+            id="main-nav"
+            aria-roledescription="Burger menu"
+            aria-expanded="false"
+          >
+            <ul id="menu-list">
+              <li><a href="">Recommended</a></li>
+              <li><a href="">Challenge</a></li>
+              <li><a href="">Filter</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
       <section id="drink-card-api">
-      <!-- replace the 'events-btn' with the drinking card id html & js-->
+        <!-- replace the 'events-btn' with the drinking card id html & js-->
         <button id="events-btn">CLICK me</button>
-          <div id="my-modal" class="modal">
-    
-            <div class="modal-content">
-              <span class="close" aria-label="close button">&times;</span>
-              
-                <div id="modal-text">
-                  <div class="img-container">
-                    <img src="https://www.allrecipes.com/thmb/jgUBewi7-dIrLBAgMi6meC7s_zw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24221-Sex-On-The-Beach-DDMFS-4x3-cd29644eb4e34a63a362584a342b4a30.jpg" id="img-api">
-                  </div>
-                  
-                      <div class="text1-container">
-                        <h2 id="drink-title">S*x on the beach</h2>
-                        <h3 id="drink-type">alcoholic / non-alcoholic</h3>
-                        <table>
-                          <tr>
-                            <th>Ingredients</th>
-                            <th>Measurements</th>
-                          </tr>
-                            <tr>
-                              <td id="ingredient1">Vodka</td>
-                              <td id="measurement1">30ml</td>
-                            </tr>
-                            <tr>
-                              <td id="ingredient2">Vodka</td>
-                              <td id="measurement2">30ml</td>
-                            </tr>
-                            <tr>
-                              <td id="ingredient3">Vodka</td>
-                              <td id="measurement3">30ml</td>
-                            </tr>
-                            <tr>
-                              <td id="ingredient4">Vodka</td>
-                              <td id="measurement4">30ml</td>
-                            </tr>
-                            <tr>
-                              <td id="ingredient5">Vodka</td>
-                              <td id="measurement5">30ml</td>
-                            </tr>
-                            <tr>
-                              <td id="ingredient6">Vodka</td>
-                              <td id="measurement6">30ml</td>
-                            </tr>
-                            <tr>
-                              <td id="ingredient7">Vodka</td>
-                              <td id="measurement7">30ml</td>
-                            </tr>
-                          </table>
-                        
-                      </div>
-                      <div class="text2-container">
-                        <h2>Instructions:</h2>
-                          <div class="instruction-wrapper">
-                            <p id="instructions">beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep</p>
-                          </div>
-                        <h2>Glass type:</h2><h3 id="glass-type">beep</h3>
-                      </div>
+        <div id="my-modal" class="modal">
+          <div class="modal-content">
+            <span class="close" aria-label="close button">&times;</span>
+
+            <div id="modal-text">
+              <div class="img-container">
+                <img
+                  src="https://www.allrecipes.com/thmb/jgUBewi7-dIrLBAgMi6meC7s_zw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24221-Sex-On-The-Beach-DDMFS-4x3-cd29644eb4e34a63a362584a342b4a30.jpg"
+                  id="img-api"
+                />
+              </div>
+
+              <div class="text1-container">
+                <h2 id="drink-title">S*x on the beach</h2>
+                <h3 id="drink-type">alcoholic / non-alcoholic</h3>
+                <table>
+                  <tr>
+                    <th>Ingredients</th>
+                    <th>Measurements</th>
+                  </tr>
+                  <tr>
+                    <td id="ingredient1">Vodka</td>
+                    <td id="measurement1">30ml</td>
+                  </tr>
+                  <tr>
+                    <td id="ingredient2">Vodka</td>
+                    <td id="measurement2">30ml</td>
+                  </tr>
+                  <tr>
+                    <td id="ingredient3">Vodka</td>
+                    <td id="measurement3">30ml</td>
+                  </tr>
+                  <tr>
+                    <td id="ingredient4">Vodka</td>
+                    <td id="measurement4">30ml</td>
+                  </tr>
+                  <tr>
+                    <td id="ingredient5">Vodka</td>
+                    <td id="measurement5">30ml</td>
+                  </tr>
+                  <tr>
+                    <td id="ingredient6">Vodka</td>
+                    <td id="measurement6">30ml</td>
+                  </tr>
+                  <tr>
+                    <td id="ingredient7">Vodka</td>
+                    <td id="measurement7">30ml</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="text2-container">
+                <h2>Instructions:</h2>
+                <div class="instruction-wrapper">
+                  <p id="instructions">
+                    beep beep beep beep beep beep beep beep beep beep beep beep
+                    beep beep beep beep beep beep beep beep
+                  </p>
+                </div>
+                <h2>Glass type:</h2>
+                <h3 id="glass-type">beep</h3>
               </div>
             </div>
           </div>
-        
+        </div>
       </section>
-    
     </section>
 
     <!-- Isaac HTML code goes here -->
@@ -127,10 +133,11 @@
       </div>
     </section>
 
-    <section class="jack">
+    <section class="reccomended-drinks">
+      <h2 class="rec-title">Our Reccomendations</h2>
       <section class="top-picks">
         <div class="picks-inner">
-          <div class="card green">
+          <div class="card green" data-viewing="true" data-number="0">
             <div class="card-inner">
               <div class="card-top">
                 <div class="img-c">
@@ -145,8 +152,8 @@
                   <ul class="ingredients">
                     <li><strong>2 ½ oz</strong> Bourbon</li>
                     <li><strong>1/2 oz</strong> simple syrup</li>
-                    <li>3 dash Angostura Bitters</li>
-                    <li>1 each Lemon and orange twist</li>
+                    <li><strong>3</strong> dash Angostura Bitters</li>
+                    <li><strong>1 each</strong> Lemon and orange twist</li>
                   </ul>
                   <p class="alcoholic">Alcoholic or Non-Alcoholic</p>
                 </div>
@@ -161,8 +168,8 @@
               </div>
             </div>
           </div>
-          <div class="card red">2</div>
-          <div class="card orange">3</div>
+          <div class="card red" data-viewing="false" data-number="1">2</div>
+          <div class="card orange" data-viewing="false" data-number="2">3</div>
         </div>
         <svg
           class="left"
@@ -187,7 +194,22 @@
         </svg>
       </section>
       <section class="randomDrinks">
-        <div class="drinksConatiner">
+        <h3 class="random-title">Cocktail Randomiser</h3>
+        <div class="button-container">
+          <button class="alcoholic-btn">Alcoholic</button>
+          <button class="non-alcoholic-btn">Non-Alcoholic</button>
+          <div class="button-c">
+            <button class="change">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="drinksContainer">
           <div class="drink-card" data-number="1">
             <img class="drink-img" src="" alt="" srcset="" />
             <div class="text-c">
@@ -217,20 +239,10 @@
             </div>
           </div>
         </div>
-        <div class="button-c">
-          <button class="change">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"
-              />
-            </svg>
-          </button>
-        </div>
       </section>
     </section>
     <script src="./JS/index.js"></script>
+    <script src="./JS/carousels.js"></script>
     <script src="./JS/script-iLi.js"></script>
   </body>
-
 </html>
