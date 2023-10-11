@@ -105,7 +105,7 @@ li, a, ul, .menu-text, .logo-img, #logo, svg, p {
   display: none; 
   position: fixed; 
   z-index: 10000;
-  padding-top: 100px;
+  padding-top: 2rem;
   left: 0;
   top: 0;
   width: 100%; 
@@ -119,17 +119,16 @@ li, a, ul, .menu-text, .logo-img, #logo, svg, p {
 /* container of img + text */
 .modal-content {
   width: 80%;
-  height: 43rem;
+  height: 90%;
   background-color: var(--white);
-  margin: auto;
-  padding: 1rem;
+  margin: 1rem auto auto auto;
   border: none;
   display: flex;
   flex-direction: column;
   border: none;
   border-radius: 0.6rem;
   box-shadow: 6px 6px 3px rgb(170, 170, 170), inset 0rem 6rem 0 var(--sixty), inset 0rem 12rem 0 var(--ten);
-  font-size: 80%;
+  font-size: 90%;
 }
 
 /* img + text */
@@ -139,7 +138,7 @@ li, a, ul, .menu-text, .logo-img, #logo, svg, p {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2.6rem;
   margin: 0.2rem auto auto auto;
 }
 
@@ -161,13 +160,14 @@ li, a, ul, .menu-text, .logo-img, #logo, svg, p {
 }
 
 #drink-title {
-  font-size: 2.3rem;
+  font-size: 1.4rem;
   padding-bottom: 1rem;
+  padding-left: 0.7rem;
 }
 
 /* api drink img */
 #img-api {
-  max-width: 14rem;
+  max-width: 15rem;
   object-fit: cover;
   border-radius: 1rem;
   border-left: 1rem solid var(--thirty);
@@ -179,6 +179,14 @@ li, a, ul, .menu-text, .logo-img, #logo, svg, p {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+
+.alc-type {
+  margin-left: 0.2rem;
+}
+
+#drink-type {
+  color: var(--thirty);
 }
 
 table {
@@ -208,7 +216,8 @@ tr:nth-child(even) {
   padding-left: 0.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 1.3rem;
+  overflow: hidden;
 }
 
 /* width of instruction text box */
@@ -216,6 +225,9 @@ tr:nth-child(even) {
   width: 15rem;
 }
 
+.text2-container > h2 {
+  font-size: 1rem;
+}
 
 
 @media screen and (min-width: 900px){
@@ -270,8 +282,18 @@ tr:nth-child(even) {
     gap: 2.1rem;
   }
 
+  #drink-title {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
   #img-api {
     max-width: 24rem;
+  }
+
+  .alc-type {
+    margin-left: 0.4rem;
   }
 
   th, td {
@@ -280,7 +302,7 @@ tr:nth-child(even) {
 
   .text1-container {
     padding-top: 2rem;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .text2-container {
