@@ -138,7 +138,7 @@ li, a, ul, .menu-text, .logo-img, #logo, svg, p {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 2.6rem;
+  gap: 1.3rem;
   margin: 0.2rem auto auto auto;
 }
 
@@ -238,8 +238,9 @@ tr:nth-child(even) {
 
 #instructions {
   line-height: 1rem;
-  max-height: 5rem;
+  max-height: 7rem;
   overflow: hidden;
+  font-size: 0.7rem;
 }
 
 @media screen and (min-width: 900px){
@@ -332,9 +333,18 @@ tr:nth-child(even) {
     width: 22rem;
   }
 
+  .text2-container > h2 {
+    font-size: 1.5rem;
+  }
+  
+  .extras > h2 {
+    font-size: 1.5rem;
+  }
+
   #instructions {
     line-height: 2rem;
     max-height: 15rem;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-y: scroll;
   }
 }
